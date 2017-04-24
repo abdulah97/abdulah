@@ -19,7 +19,18 @@ namespace Lab9
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string s = textBox1.Text;
+            string [] A = s.Split(',');
+            int temp = 0;
+            int nums = 0;
+            int i = 0;
+            while (i < A.Length)
+            {
+                nums = Convert.ToInt32(A[i]);
+                temp += nums;
+                i++;
+            }
+            label2.Text = (temp / i).ToString();
         }
     }
 }
